@@ -14,11 +14,11 @@ public:
 
         std::vector<std::vector<bool>> mark(row, std::vector<bool>(col, true));
 
-          for (int i=0;i<row;i++){
-            for (int j=0;j<col;j++){
+          for (int i = 0; i < row; i++){
+            for (int j = 0; j < col; j++){
                 if (grid[i][j] == '1' && mark[i][j] == true){
 
-                    search(i,j,grid,mark);
+                    search(i, j, grid, mark);
                     resolution+=1;
 
                 }
@@ -29,6 +29,7 @@ public:
     }
 
      void search(int i, int j, std::vector<std::vector<char>>& grid, std::vector<std::vector<bool>>& mark){
+        
         mark[i][j] = false;
         
         if (i+1<grid.size() && grid[i+1][j]=='1' && mark[i+1][j]==true){
