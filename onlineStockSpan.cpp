@@ -18,8 +18,14 @@ public:
         int count = 0;
 
         while(stk.empty() == false && stk.top().first <= price) {
-            
+            count += stk.top().second;
+            stk.pop();
         }
+
+        count++;
+        stk.push({price, count});
+
+        return count;
         
     }
 };
