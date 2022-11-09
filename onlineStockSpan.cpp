@@ -1,10 +1,25 @@
+#include<stack>
+
+
+using std::stack;
+using std::pair;
+
 class StockSpanner {
 public:
+
+    stack<pair<int, int>> stk;
+
     StockSpanner() {
         
     }
     
     int next(int price) {
+
+        int count = 0;
+
+        while(stk.empty() == false && stk.top().first <= price) {
+            
+        }
         
     }
 };
