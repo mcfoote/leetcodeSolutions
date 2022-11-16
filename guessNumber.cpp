@@ -17,7 +17,7 @@ public:
 
         while(start <= end) {
             mid = start + (end - start)/2;
-            int resolution = guessNumber(mid);
+            int resolution = guess(mid);
             if(resolution == 0) {
                 return mid;
             }else if(resolution == -1) {
@@ -27,7 +27,7 @@ public:
             }
 
         }
-        
+
         return -1;
         
     }
