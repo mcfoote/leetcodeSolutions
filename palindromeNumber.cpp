@@ -12,9 +12,20 @@ public:
         }
 
         int y = x;
+
         while(x) {
-            s.push(x%10);
+            s.push(x % 10);
             x /= 10;
         }
+
+        while(y) {
+            if(s.top() != (y % 10)) {
+                return false;
+            }
+            s.pop();
+                y /= 10;
+        }
+
+        return true;
     }
 };
